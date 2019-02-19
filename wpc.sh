@@ -11,7 +11,6 @@ tAfternoon=15
 tNight=19
 
 # Dir to images you want to use
-dir=/usr/share/backgrounds/Firewatch/
 dir=~/Pictures/Wallpapers/
 
 # Images in dir you want to use
