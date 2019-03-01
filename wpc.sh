@@ -11,7 +11,7 @@ tAfternoon=15
 tNight=19
 
 # Dir to images you want to use
-dir=~/Pictures/Wallpapers/
+dir=~/Pictures/Mojave/
 
 # Images in dir you want to use
 iMorning=morning.png
@@ -31,6 +31,7 @@ monitor=monitorLVDS1
 
 
 
+echo "---------------"
 
 # Keep looping every 10 minutes
 while (true)
@@ -76,36 +77,33 @@ do
 
 	# Change wallpaper if it's not already set 
 	if [[ "$changed" == 0 ]] ; then
-		feh --bg-scale $imgPath
+		nitrogen --set-zoom-fill $imgPath
+		#feh --bg-scale $imgPath
 		changed=0
 
 		# Print info
-		echo ".-----------------------------------------------."
-		echo "|		Wallpaper changer		|"
-		echo "|		-----------------		|"
 		if [[ "$img" ==  "$iMorning" ]] ; then
-			echo "|		[X]	Morning			|"
-			echo "|		[ ]	Day			|"
-			echo "|		[ ]	Afternoon		|"
-			echo "|		[ ]	Night			|"
+			echo "[X] Morning"
+			echo "[ ] Day"
+			echo "[ ] Evening"
+			echo "[ ] Night"
 		elif [ "$img" =  "$iDay" ] ; then
-			echo "|		[ ]	Morning			|"
-			echo "|		[X]	Day			|"
-			echo "|		[ ]	Afternoon		|"
-			echo "|		[ ]	Night			|"
+			echo "[ ] Morning"
+			echo "[X] Day"
+			echo "[ ] Evening"
+			echo "[ ] Night"
 		elif [ "$img" =  "$iAfternoon" ] ; then
-			echo "|		[ ]	Morning			|"
-			echo "|		[ ]	Day			|"
-			echo "|		[X]	Afternoon		|"
-			echo "|		[ ]	Night			|"
+			echo "[ ] Morning"
+			echo "[ ] Day"
+			echo "[X] Evening"
+			echo "[ ] Night"
 		elif [ "$img" =  "$iNight" ] ; then
-			echo "|		[ ]	Morning			|"
-			echo "|		[ ]	Day			|"
-			echo "|		[ ]	Afternoon		|"
-			echo "|		[X]	Night			|"
+			echo "[ ] Morning"
+			echo "[ ] Day"
+			echo "[ ] Evening"
+			echo "[X] Night"
 		fi
-		echo "|		-----------------		|"
-		echo "'-----------------------------------------------'"
+		echo "---------------"
 
 	fi
 
