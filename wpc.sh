@@ -77,7 +77,7 @@ do
 
 	# Change wallpaper if it's not already set 
 	if [[ "$changed" == 0 ]] ; then
-		nitrogen --set-zoom-fill $imgPath
+		feh --bg-scale $imgPath
 		#feh --bg-scale $imgPath
 		changed=0
 
