@@ -3,6 +3,11 @@
 #	CONFIG
 # ---------------------------
 
+# Set either nitrogen or feh to 1
+# to select which dependency you
+# want to use
+nitrogen=1
+feh=0
 
 # At which hour wallpaper should change
 tMorning=07
@@ -77,33 +82,26 @@ do
 
 	# Change wallpaper if it's not already set 
 	if [[ "$changed" == 0 ]] ; then
-		feh --bg-scale $imgPath
-		#feh --bg-scale $imgPath
 		changed=0
+		if [[ "$nitrogen" == 1 ]] ; then
+			nitrogen --set-scaled $imgPath
+		elif [[ "$feh" == 1 ]] ; then
+			feh --bg-scaled $imgPath
+		fi
+
+		# Clear screen
+		clear
 
 		# Print info
 		if [[ "$img" ==  "$iMorning" ]] ; then
-			echo "[X] Morning"
-			echo "[ ] Day"
-			echo "[ ] Evening"
-			echo "[ ] Night"
+			echo "Morning"
 		elif [ "$img" =  "$iDay" ] ; then
-			echo "[ ] Morning"
-			echo "[X] Day"
-			echo "[ ] Evening"
-			echo "[ ] Night"
+			echo "Day"
 		elif [ "$img" =  "$iAfternoon" ] ; then
-			echo "[ ] Morning"
-			echo "[ ] Day"
-			echo "[X] Evening"
-			echo "[ ] Night"
+			echo "Evening"
 		elif [ "$img" =  "$iNight" ] ; then
-			echo "[ ] Morning"
-			echo "[ ] Day"
-			echo "[ ] Evening"
-			echo "[X] Night"
+			echo "Night"
 		fi
-		echo "---------------"
 
 	fi
 
