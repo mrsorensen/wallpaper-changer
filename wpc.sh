@@ -86,7 +86,7 @@ do
 		if [[ "$nitrogen" == 1 ]] ; then
 			nitrogen --set-scaled $imgPath
 		elif [[ "$feh" == 1 ]] ; then
-			feh --bg-scaled $imgPath
+			feh --bg-scale $imgPath
 		fi
 
 		# Clear screen
