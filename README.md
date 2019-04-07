@@ -3,7 +3,8 @@ A script that changes the wallpaper 4 times a day to whatever you want
 
 
 ## Dependencies 
-* [Feh](https://github.com/derf/feh)  --  for changing the wallpaper
+* [Nitrogen](https://github.com/l3ib/nitrogen) -- for changing wallpaper
+* [Feh](https://github.com/derf/feh) --  is also an option
 
 
 ## Config
