@@ -6,17 +6,18 @@
 # Set either nitrogen or feh to 1
 # to select which dependency you
 # want to use
-nitrogen=1
+nitrogen=0
 feh=0
+wal=1
 
 # At which hour wallpaper should change
-tMorning=07
+tMorning=06
 tDay=10
-tAfternoon=15
-tNight=19
+tAfternoon=20
+tNight=22
 
 # Dir to images you want to use
-dir=~/Pictures/Mojave/
+dir=~/Pictures/Firewatch/
 
 # Images in dir you want to use
 iMorning=morning.png
@@ -85,6 +86,8 @@ do
 		changed=0
 		if [[ "$nitrogen" == 1 ]] ; then
 			nitrogen --set-scaled $imgPath
+		elif [[ "$wal" == 1 ]] ; then
+			wal -i $imgPath
 		elif [[ "$feh" == 1 ]] ; then
 			feh --bg-scale $imgPath
 		fi
