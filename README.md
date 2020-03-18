@@ -6,7 +6,7 @@ A script that changes your wallpaper at X o'clock
 * [Pywal](https://github.com/dylanaraps/pywal)
 
 ## How does it work
-Put images in your target folder with the name of the hour it should be changed.
+Put images in your target folder with the number of the hour it should be changed.
 
 Target folder example:
 ```
