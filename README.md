@@ -1,20 +1,25 @@
-# wallpaper-changer
-A script that changes the wallpaper 4 times a day to whatever you want
+# Wallpaper-changer
+A script that changes your wallpaper at X o'clock
 
 
 ## Dependencies 
-* [Nitrogen](https://github.com/l3ib/nitrogen) -- for changing wallpaper
-* [Feh](https://github.com/derf/feh) --  is also an option
-* [Pywal](https://github.com/dylanaraps/pywal) -- for full theming
+* [Pywal](https://github.com/dylanaraps/pywal)
 
+## How does it work
+Put images in your target folder with the name of the hour it should be changed.
+Target folder example:
+00.png
+03.png
+06.png
+09.png
+12.png
+15.png
+18.png
+21.png
 
-## Config
-* Open wpc.sh and change the directory and image names to what you want
-
-## Installation / How to run
+## How to run
 You can run this in a terminal
 ```
 cd wallpaper-changer/ && \
-./wpc.sh
+./wpc.sh path/to/images
 ```
-**or** you can add the script to your startup
