@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [[ "$1" == '' ]]; then
+	echo "Path to wallpaper folder expected:"
+	echo "./wpc.sh path/to/wallpapers"
+	exit
+fi
+
 # Set directory to first arguement
 dir=$1
 
@@ -30,7 +36,7 @@ do
 			if [[ "$changed" == 0 ]] ; then
 				changed=1
 				echo "changing to $basefile.png"
-				wal -a 70 -i $dir/$basefile.png
+				wal -a 85 -i $dir/$basefile.png
 				break
 			else
 				break
